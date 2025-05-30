@@ -1,0 +1,495 @@
+body{
+    margin:0;
+    padding:0;
+    background-color:white;
+    font-family:Arial, sans-serif;
+    padding: 80px;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: lightblue;
+    color: white;
+    padding: 15px 20px;
+    align-items: center;
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    z-index: 1000; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1)
+
+}
+.header-section {
+  flex: 1;
+  margin: 10px 20px;
+}
+
+main {
+  padding-top: 80px;
+}
+
+nav ul{
+  list-style: none;
+  padding: 0;
+  display: flex;
+  margin: 0;
+  gap: 25px;
+}
+
+nav ul li{
+    display:inline;
+    padding: 0 15px;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+.container{
+    display: flex;
+    max-width: 1200px;
+    margin:100px auto 20px auto;
+    gap: 200px;
+    
+}
+
+.sidebar{
+    width: 20%;
+    padding: 20px;
+    font-weight: bold;
+    background: white;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.main-content{
+    width: 60%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+nav ul li.active{
+    font-weight: bold;
+    border-bottom: 2px solid orange;
+}
+
+.sidebar h2{
+    color: black;
+}
+
+.sidebar img{
+    width: 100%;
+    border-radius: 8px;
+}
+
+.sidebar p{
+    font: 14px;
+}
+
+.sidebar a{
+    color: orange;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.logo{
+    width: 120px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.responsive-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+/* Style for unvisited links */
+a:link {
+    color:black; 
+    text-decoration: none; 
+  }
+  
+  /* Style for visited links */
+  a:visited{
+    color:purple; 
+    text-decoration: none; 
+  }
+  
+  /*Style for active links*/
+  a:active{
+    color:yellow; 
+    text-decoration: none; 
+  }
+  
+  /*Style for link on hover */
+  a:hover{
+    color:red; 
+    text-decoration: underline; 
+  }
+
+/*Tablets*/
+@media screen and (max-width:768px)
+{
+
+    .sidebar{
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .main-content{
+        width: 90%;
+    }
+
+    .container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sidebar img{
+        width: 100%;
+    }
+
+}
+
+/*Smartphones*/
+@media screen and (max-width:468px)
+{
+
+    header{
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+        height: auto;
+        transition: all 0.3s ease;
+    }
+
+    body{
+      padding-top: 120px;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 10px;
+    }
+
+    .container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sidebar.main-content{
+        width: 100%;
+    }
+
+    .sidebar img{
+        width: 100%;
+    }
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+  }
+  
+  .dropdown-content {
+    display: none !important;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 300px;
+    padding: 10px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    z-index: 10;
+    flex-direction: column;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: flex !important;
+  }
+
+  /* Rich Dropdown */
+  .rich-dropdown {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 600px;
+  }
+  
+  .rich-dropdown li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .rich-dropdown li img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .rich-dropdown li div {
+    max-width: 220px;
+  }
+  
+  .rich-dropdown li strong {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+  }
+  
+  .rich-dropdown li p {
+    margin: 0 0 8px;
+    font-size: 14px;
+    color: black;
+  }
+  
+  .cta-button {
+    background-color: rgb(227, 200, 236);
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .cta-button:hover {
+    background-color: #bf9ac9;
+    color: black;
+  }
+
+  .book-now-btn + .confirmation-msg {
+  display: none;
+  margin-top: 10px;
+  color: green;
+  font-weight: bold;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+  
+  .site-footer {
+    background: black;
+    color: white;
+    padding: 30px 20px;
+    font-size: 14px;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .footer-section {
+    flex: 1;
+    margin: 10px 20px;
+  }
+  
+  .footer-section h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: orange;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li a {
+    color: limegreen;
+    text-decoration: none;
+  }
+  
+  .footer-section ul li a:hover {
+    color: goldenrod;
+  }
+  
+  .footer-section.socials a img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    transition: transform 0.3s;
+  }
+  
+  .footer-section.socials a img:hover {
+    transform: scale(1.2);
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 13px;
+    color: rgb(148, 148, 194);
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px;
+    padding: 20px;
+    margin: 0 auto;
+  }
+  
+  .grid-container.food-grid,
+  .grid-container.pets-grid,
+  .grid-container.accessories-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .grid-item {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .grid-item img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border-radius: 0; 
+    background-color: transparent;
+  }
+  
+  /* Responsive for mobile */
+  @media (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .image-container {
+    position: relative;
+    width: 100%;
+  }
+  
+  
+  .about-layout {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .main-content {
+    flex: 3;
+  }
+  
+  .sidebar {
+    flex: 1;
+    max-width: 300px;
+  }
+  
+  .team-container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .team-member {
+    text-align: center;
+    max-width: 150px;
+  }
+  
+  .team-member img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 10px;
+  }
+  
+  .testimonials {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+  }
+  
+  .testimonial {
+    flex: 1 1 220px;
+    background: #f9f9f9;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    font-style: italic;
+  }
+  
+  .testimonial h5 {
+    margin-top: 8px;
+    text-align: right;
+    font-size: 14px;
+    color: #666;
+  }
+  .feedback-container {
+    max-width: 600px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  
+  .feedback-form .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .feedback-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .feedback-form input,
+  .feedback-form select,
+  .feedback-form textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  .radio-options {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+  }
+  
+  button {
+    background: #ff6600;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: #e65c00;
+  }
+  
